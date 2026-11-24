@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Battaglia Navale</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="wrap">
+<header class="top">
+  <h1 class="logo"><span class="anchor">⚓</span><span data-i18n="title"></span></h1>
+  <div class="ctrl">
+    <div class="seg" role="group" aria-label="Language">
+      <button data-lang="it" aria-pressed="false" aria-label="Italiano" title="Italiano"><img src="assets/flags/it.svg" alt="" width="20" height="14"><span>IT</span></button>
+      <button data-lang="en" aria-pressed="false" aria-label="English" title="English"><img src="assets/flags/en.svg" alt="" width="20" height="14"><span>EN</span></button>
+      <button data-lang="de" aria-pressed="false" aria-label="Deutsch" title="Deutsch"><img src="assets/flags/de.svg" alt="" width="20" height="14"><span>DE</span></button>
+    </div>
+    <button class="round" id="btnTheme" aria-label="Theme">🌙</button>
+  </div>
+</header>
+
+<section id="menu" class="panel menu">
+  <p class="tagline" data-i18n="tagline"></p>
+  <button class="btn main" id="btnPc"><span class="ico">🤖</span><span data-i18n="playPc"></span></button>
+  <button class="btn" id="btnCreate"><span class="ico">🌐</span><span data-i18n="create"></span></button>
+  <div class="join">
+    <input id="joinCode" maxlength="5" data-i18n-ph="codePh" aria-label="Code" autocomplete="off">
+    <button class="btn" id="btnJoin" data-i18n="join"></button>
+  </div>
+  <p id="menuMsg" class="msg"></p>
+</section>
+
+<section id="game" class="panel hidden">
+  <p id="status" class="pill" data-tone="wait"></p>
+  <div id="roomInfo" class="room hidden"><span data-i18n="roomCode"></span> <b id="code"></b></div>
+  <div id="tools" class="tools">
+    <button class="btn sm" id="btnRotate"></button>
+    <button class="btn sm" id="btnRandom" data-i18n="random"></button>
+    <button class="btn sm" id="btnReset" data-i18n="reset"></button>
+    <button class="btn sm main" id="btnReady" data-i18n="ready" disabled></button>
+  </div>
+  <div class="boards">
+    <div><h2 data-i18n="yourFleet"></h2><div class="board"><div class="cols"></div><div class="rows"></div><div id="mine" class="grid"></div></div></div>
+    <div><h2 data-i18n="enemySea"></h2><div class="board"><div class="cols"></div><div class="rows"></div><div id="enemy" class="grid enemy"></div></div></div>
+  </div>
+  <button id="btnNew" class="btn main again hidden" data-i18n="newGame"></button>
+</section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.5.4/peerjs.min.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/game.js"></script>
+<script src="js/online.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
