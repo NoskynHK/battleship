@@ -35,10 +35,14 @@
     <button class="btn" id="btnJoin" data-i18n="join"></button>
   </div>
   <p id="menuMsg" class="msg"></p>
+  <a class="btn" id="btnHub" href="https://noskynhk.github.io/projecthub/"><span class="ico">🏠</span><span data-i18n="hub"></span></a>
 </section>
 
 <section id="game" class="panel hidden">
-  <p id="status" class="pill" data-tone="wait"></p>
+  <div class="gamebar">
+    <p id="status" class="pill" data-tone="wait"></p>
+    <button class="btn sm" id="btnMenu"><span>←</span><span data-i18n="backMenu"></span></button>
+  </div>
   <div id="roomInfo" class="room hidden"><span data-i18n="roomCode"></span> <b id="code"></b></div>
   <div id="tools" class="tools">
     <button class="btn sm" id="btnRotate"></button>
@@ -50,6 +54,7 @@
     <div><h2 data-i18n="yourFleet"></h2><div class="board"><div class="cols"></div><div class="rows"></div><div id="mine" class="grid"></div></div></div>
     <div><h2 data-i18n="enemySea"></h2><div class="board"><div class="cols"></div><div class="rows"></div><div id="enemy" class="grid enemy"></div></div></div>
   </div>
+  <div id="dockWrap" class="dockwrap"><h2 data-i18n="dockTitle"></h2><div id="dock" class="dock"></div></div>
   <button id="btnNew" class="btn main again hidden" data-i18n="newGame"></button>
 </section>
 </main>
@@ -58,6 +63,7 @@
 <script src="js/i18n.js"></script>
 <script src="js/theme.js"></script>
 <script src="js/game.js"></script>
+<script src="js/config.js"></script>
 <script src="js/online.js"></script>
 <script src="js/main.js"></script>
 </body>
